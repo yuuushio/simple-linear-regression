@@ -1,3 +1,6 @@
+import matplotlib
+
+matplotlib.use("Qt5Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib.animation import FuncAnimation
@@ -32,7 +35,8 @@ def calc_gradients(w, b, xv, yv, n):
     return tmp_w / n, tmp_b / n
 
 
-def draw_viz(xv, yv, line_eq, w_list, b_list, animation=False):
+def draw_viz(xv, yv, line_eq, w_list, b_list, epoch, animation=False):
+    print(matplotlib.get_backend())
     fig, ax = plt.subplots()
     ax.plot(xv, yv, "o")
     (line_plot,) = ax.plot(xv, line_eq, "-")
@@ -72,10 +76,11 @@ def linear_regression(rate=0.001, epoch=100, animation=False):
         b_list.append(b)
 
     best_fit_line = w * xv_list[0] + b
+    draw_viz(xv_list[0], yv, best_fit_line, w_list, b_list, epoch, animation)
 
 
 def main():
-    linear_regression()
+    linear_regression(0.001, 1000, False)
 
 
 if __name__ == "__main__":

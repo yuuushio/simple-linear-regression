@@ -1087,6 +1087,57 @@ wheels = [
 ]
 
 [[package]]
+name = "pyqt5"
+version = "5.15.11"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pyqt5-qt5" },
+    { name = "pyqt5-sip" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/0e/07/c9ed0bd428df6f87183fca565a79fee19fa7c88c7f00a7f011ab4379e77a/PyQt5-5.15.11.tar.gz", hash = "sha256:fda45743ebb4a27b4b1a51c6d8ef455c4c1b5d610c90d2934c7802b5c1557c52", size = 3216775 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/11/64/42ec1b0bd72d87f87bde6ceb6869f444d91a2d601f2e67cd05febc0346a1/PyQt5-5.15.11-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:c8b03dd9380bb13c804f0bdb0f4956067f281785b5e12303d529f0462f9afdc2", size = 6579776 },
+    { url = "https://files.pythonhosted.org/packages/49/f5/3fb696f4683ea45d68b7e77302eff173493ac81e43d63adb60fa760b9f91/PyQt5-5.15.11-cp38-abi3-macosx_11_0_x86_64.whl", hash = "sha256:6cd75628f6e732b1ffcfe709ab833a0716c0445d7aec8046a48d5843352becb6", size = 7016415 },
+    { url = "https://files.pythonhosted.org/packages/b4/8c/4065950f9d013c4b2e588fe33cf04e564c2322842d84dbcbce5ba1dc28b0/PyQt5-5.15.11-cp38-abi3-manylinux_2_17_x86_64.whl", hash = "sha256:cd672a6738d1ae33ef7d9efa8e6cb0a1525ecf53ec86da80a9e1b6ec38c8d0f1", size = 8188103 },
+    { url = "https://files.pythonhosted.org/packages/f3/f0/ae5a5b4f9b826b29ea4be841b2f2d951bcf5ae1d802f3732b145b57c5355/PyQt5-5.15.11-cp38-abi3-win32.whl", hash = "sha256:76be0322ceda5deecd1708a8d628e698089a1cea80d1a49d242a6d579a40babd", size = 5433308 },
+    { url = "https://files.pythonhosted.org/packages/56/d5/68eb9f3d19ce65df01b6c7b7a577ad3bbc9ab3a5dd3491a4756e71838ec9/PyQt5-5.15.11-cp38-abi3-win_amd64.whl", hash = "sha256:bdde598a3bb95022131a5c9ea62e0a96bd6fb28932cc1619fd7ba211531b7517", size = 6865864 },
+]
+
+[[package]]
+name = "pyqt5-qt5"
+version = "5.15.16"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ff/89/65a4b9c6bc89012182ff46bf8e503a8aa5e5570df7cb628211c93012beca/PyQt5_Qt5-5.15.16-py3-none-macosx_10_13_x86_64.whl", hash = "sha256:18b6fec012de60921fcb131cf2a21368171dc29050d43e4b81a64be407a36105", size = 39957063 },
+    { url = "https://files.pythonhosted.org/packages/0a/60/b6db285c87666b02aa11d0946d7bb381d8bdcc815cc5aa61fa91272b321b/PyQt5_Qt5-5.15.16-py3-none-macosx_11_0_arm64.whl", hash = "sha256:e1a0e7ae35a7615c74a293705204579650930486a89af23082462f429dae504a", size = 37122434 },
+    { url = "https://files.pythonhosted.org/packages/dc/1a/c4f861c4d7a9844a207b8bc3aa9dd84c51f823784d405469cde83d736cf1/PyQt5_Qt5-5.15.16-py3-none-manylinux2014_x86_64.whl", hash = "sha256:5ee1754a6460849cba76c0f0c490c0ccc3b514abc780b141cf772db22b76b54b", size = 59854452 },
+]
+
+[[package]]
+name = "pyqt5-sip"
+version = "12.16.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/3c/cd/f6f957107447bc53e398f6149f55a7f335c434f201e77dcfb8a3c20dc42c/pyqt5_sip-12.16.1.tar.gz", hash = "sha256:8c831f8b619811a32369d72339faa50ae53a963f5fdfa4d71f845c63e9673125", size = 103975 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1b/fe/d679c70e719f2ec46ee77bb6e878f23eb8d6ad8bc140e2ba6e732d99899d/PyQt5_sip-12.16.1-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:2349f118dc6f01ee71fe57d8bab9e606ecf241468989abb23b5691d5538d7a69", size = 124520 },
+    { url = "https://files.pythonhosted.org/packages/22/5d/35ffa29def1db02c06b70a77988b07daf989a8860ad7bf2fabe9726373af/PyQt5_sip-12.16.1-cp313-cp313-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:bbabdcc031e40417333bdd9e59d8add815c8f0663ebfcbcd3024bdeb55f35e9c", size = 281298 },
+    { url = "https://files.pythonhosted.org/packages/07/96/88e6dd303c7891a55ab03b4159793252e06c020f7d56b8e0897fb4301681/PyQt5_sip-12.16.1-cp313-cp313-win32.whl", hash = "sha256:b6d06f6b49c7cd70db44277e21134390dcabb709da434d63754c9968ff6d98e2", size = 49372 },
+    { url = "https://files.pythonhosted.org/packages/ba/e7/45e83e131f863377fd779fec1d6bbed364e202a9580240bbcee6c177d830/PyQt5_sip-12.16.1-cp313-cp313-win_amd64.whl", hash = "sha256:e2bd572cfb969089c2813c85d6e1393ec1a0aeecebc53934ba9f062acf440b50", size = 57943 },
+]
+
+[[package]]
+name = "pyside2"
+version = "5.15.2.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "shiboken2" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1b/1f/194ed3a9c79abe4d8e8800112d5c19d0b9d7a1aca8b10029043bb3a083d0/PySide2-5.15.2.1-5.15.2-cp35.cp36.cp37.cp38.cp39.cp310-abi3-macosx_10_13_intel.whl", hash = "sha256:a9e2e6bbcb5d2ebb421e46e72244a0f4fe0943b2288115f80a863aacc1de1f06", size = 148464754 },
+    { url = "https://files.pythonhosted.org/packages/c2/9a/78ca8bada6cf4d2798e0c823c025c590517d74445837f4eb50bfddce8737/PySide2-5.15.2.1-5.15.2-cp35.cp36.cp37.cp38.cp39.cp310-abi3-manylinux1_x86_64.whl", hash = "sha256:23886c6391ebd916e835fa1b5ae66938048504fd3a2934ae3189a96cd5ac0b46", size = 164306859 },
+]
+
+[[package]]
 name = "python-dateutil"
 version = "2.9.0.post0"
 source = { registry = "https://pypi.org/simple" }
@@ -1286,6 +1337,15 @@ wheels = [
 ]
 
 [[package]]
+name = "shiboken2"
+version = "5.15.2.1"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/34/bb/7bad766088a8ccb6512c5d5d1520a51fcc9221b3ec371b134d14d1b269a5/shiboken2-5.15.2.1-5.15.2-cp35.cp36.cp37.cp38.cp39.cp310-abi3-macosx_10_13_intel.whl", hash = "sha256:ffd3d0ec3d508e592d7ee3885d27fee1f279a49989f734eb130f46d9501273a9", size = 958579 },
+    { url = "https://files.pythonhosted.org/packages/a6/0e/c1953bb08f45e0f1703e7dc153e9c94ba3042c282ebcd94cada385a9cdb3/shiboken2-5.15.2.1-5.15.2-cp35.cp36.cp37.cp38.cp39.cp310-abi3-manylinux1_x86_64.whl", hash = "sha256:63debfcc531b6a2b4985aa9b71433d2ad3bac542acffc729cc0ecaa3854390c0", size = 975428 },
+]
+
+[[package]]
 name = "six"
 version = "1.17.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1321,6 +1381,8 @@ dependencies = [
     { name = "kagglehub" },
     { name = "matplotlib" },
     { name = "pandas" },
+    { name = "pyqt5" },
+    { name = "pyside2" },
 ]
 
 [package.metadata]
@@ -1329,6 +1391,8 @@ requires-dist = [
     { name = "kagglehub", specifier = ">=0.3.6" },
     { name = "matplotlib", specifier = ">=3.10.0" },
     { name = "pandas", specifier = ">=2.2.3" },
+    { name = "pyqt5", specifier = ">=5.15.11" },
+    { name = "pyside2", specifier = ">=5.15.2.1" },
 ]
 
 [[package]]
