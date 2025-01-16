@@ -1,6 +1,6 @@
 # Linear Regression from Scratch
 
-![lr_animation](lr.gif)
+<img src="lr.gif" width=400>
 
 This is a implementation of simple linear regression from the group-up, including a visual animation that illustrates the convergence of the best-fit line during the training process. The model is applied to the Food Delivery Time Predictions dataset, sourced from Kaggle.
 
