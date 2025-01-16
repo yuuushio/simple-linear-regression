@@ -1,0 +1,2 @@
+avg err 189.8; 10k epochs @ 0.001
+avg err 252.48; 10k epochs @ 0.0001

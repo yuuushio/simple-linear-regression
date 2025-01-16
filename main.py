@@ -4,6 +4,7 @@ matplotlib.use("Qt5Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib.animation import FuncAnimation
+from sklearn.metrics import mean_squared_error, r2_score
 
 
 def extract_variables():
@@ -56,31 +57,53 @@ def draw_viz(xv, yv, line_eq, w_list, b_list, epoch, animation=False):
         )
         ani.save("lr.gif", writer="ffmpeg")
 
-    plt.show()
+        plt.show()
+
+
+def mse(xv, yv, w, b, n):
+    err = 0.0
+    for i in range(n):
+        err += (yv[i] - (w * xv[i] + b)) ** 2
+
+    return err / n
+
+
+# def evaluate(weights, biases, xv, yv):
+#     predicted_y = weights[-1] * xv + biases[-1]
+#     mse = mean_squared_error(yv, predicted_y)
+#     r2 = r2_score(yv, predicted_y)
+#     print(f"Mean Squared Error: {mse:.2f}")
+#     print(f"R-squared: {r2:.2f}")
+#
 
 
 def linear_regression(rate=0.001, epoch=100, animation=False):
     xv_list, yv, n = extract_variables()
-    for i, feature_v in enumerate(xv_list):
-        print(i, feature_v[0], yv[0])
+    # for i, feature_v in enumerate(xv_list):
+    #     print(i, feature_v[0], yv[0])
 
     w, b = 0, 0
     w_list = []
     b_list = []
 
-    for _ in range(epoch):
+    for i in range(epoch):
         tmp_w, tmp_b = calc_gradients(w, b, xv_list[0], yv, n)
         w += (-1) * rate * tmp_w
         b += (-1) * rate * tmp_b
         w_list.append(w)
         b_list.append(b)
-
+        if i % 1000 == 0:
+            print(i, mse(xv_list[0], yv, w, b, n))
+            # print("EVALUATE:::", evaluate(w_list, b_list, xv_list[0], yv))
+    print(
+        f"Final Result: avg. error: {mse(xv_list[0], yv, w, b, n):.2f}; {epoch} epochs @ {rate} learning rate."
+    )
     best_fit_line = w * xv_list[0] + b
     draw_viz(xv_list[0], yv, best_fit_line, w_list, b_list, epoch, animation)
 
 
 def main():
-    linear_regression(0.001, 1000, False)
+    linear_regression(0.001, 10000, False)
 
 
 if __name__ == "__main__":
